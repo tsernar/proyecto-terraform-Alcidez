@@ -49,9 +49,9 @@ jobs:
         run: terraform plan -var-file=$tfvars_file
 
       - name: Terraform Apply
-        # ⚠️ En producción (main), podrías requerir aprobación manual.
+        #  En producción (main), podrías requerir aprobación manual.
         # Por ahora, lo hacemos automático para simplicidad.
         run: terraform apply -auto-approve -var-file=$tfvars_file
 
       - name: Show deployed environment
-        run: echo "✅ Infraestructura desplegada en ambiente: $environment"
+        run: echo " Infraestructura desplegada en ambiente: $environment"
